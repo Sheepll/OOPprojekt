@@ -1,3 +1,5 @@
+package OOPprojekt;
+
 import javax.swing.JOptionPane;
 public class Alg {
     public static void main(String[] args) {
