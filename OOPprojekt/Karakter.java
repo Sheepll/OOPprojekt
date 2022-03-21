@@ -1,30 +1,30 @@
 package OOPprojekt;
 
 public class Karakter {
-    private double strengthModifer;
-    private int healthModifier;
     private String nimi;
-    private int currentHealth = 50;
-    private double currentStrength = 1.0;
-    int currentLevel = 1;
+    private int currentHealth;
+    private double currentStrength;
+    int currentLevel;
 
-    public int getBaseHealth() {
+    public int getCurrentHealth() {
         return currentHealth;
     }
 
-    public double getBaseStrength() { return currentStrength;}
+    public void setCurrentHealth(int currentHealth) {
+        this.currentHealth = currentHealth;
+    }
+
+    public double getCurrentStrength() {
+        return currentStrength;
+    }
+
+    public void setCurrentStrength(double currentStrength) {
+        this.currentStrength = currentStrength;
+    }
 
     public String getNimi() { return nimi;}
 
     public void setNimi(String nimi) { this.nimi = nimi;}
-
-    public int getHealthModifier() { return healthModifier;}
-
-    public void setHealthModifier(int healthModifier) { this.healthModifier = healthModifier;}
-
-    public double getStrengthModifer() { return strengthModifer;}
-
-    public void setStrengthModifer(double strengthModifer) { this.strengthModifer = strengthModifer;}
 
     public int getCurrentLevel() {
         return currentLevel;
@@ -34,11 +34,9 @@ public class Karakter {
         this.currentLevel = currentLevel;
     }
 
-    public Karakter(double strengthModifer, int healthModifier, String nimi, int currentHealth, double currentStrength, int currentLevel) {
-        this.strengthModifer = strengthModifer;
+    public Karakter(String nimi, int currentHealth, double currentStrength, int currentLevel) {
         this.currentHealth = currentHealth;
         this.currentStrength = currentStrength;
-        this.healthModifier = healthModifier;
         this.nimi = nimi;
         this.currentLevel = currentLevel;
     }
