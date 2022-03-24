@@ -1,5 +1,10 @@
 package OOPprojekt;
 
+/**
+ * Klass Vastane on vastast tähistav klass mis on klassi Karakter alamklass. Vastane katab üle klassi Karakter mõlemad
+ * meetodid, tagades et vastane on alati natukene tugevam kui mängija.
+ */
+
 public class Vastane extends Karakter {
 
     public Vastane(String nimi, int currentHealth, double currentStrength) {
@@ -12,6 +17,6 @@ public class Vastane extends Karakter {
     }
     @Override
     void strengthUp(){
-        currentStrength = M2ng.getLv()*0.15 + currentStrength;
+        currentStrength = M2ng.getLv()*0.3 + currentStrength;
     }
 }

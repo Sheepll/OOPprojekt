@@ -1,6 +1,16 @@
 package OOPprojekt;
 
-import javax.swing.*;
+
+/**
+ * Klass Karakter on mängija tegelast väljendav klass, kus on parameetrid currentHealth (mängija HP, millega ta iga
+ * võitlust alustab), currentStrength(mängija tugevus, millega ta iga võitlust alustab) ja nimi, mis on kasutaja poolt
+ * vabalt valitud sõne.
+ *
+ * Klassis on kaks meetodit mis tõstavad mängija HP'd ja tugevust, olenevalt sellest kumma kasutaja valis.
+ *
+ * Parameeter currentStrength mõjutab suvaliselt genereeritud löögi tugevust, näiteks kui genereeritakse arv 10 ja
+ * tugevus on 1.2, teeb mängija 12 elupunkti väärtuses kahju.
+ */
 
 public class Karakter {
     int currentHealth;
