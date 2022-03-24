@@ -1,50 +1,17 @@
 package OOPprojekt;
 
-public class Vastane {
-    private String nimi;
-    private int currentHealth;
-    private double currentStrength;
-    int currentLevel;
+public class Vastane extends Karakter {
 
-    public int getCurrentHealth() {
-        return currentHealth;
+    public Vastane(String nimi, int currentHealth, double currentStrength) {
+        super(nimi, currentHealth, currentStrength);
     }
 
-    public void setCurrentHealth(int currentHealth) {
-        this.currentHealth = currentHealth;
-    }
-
-    public double getCurrentStrength() {
-        return currentStrength;
-    }
-
-    public void setCurrentStrength(double currentStrength) {
-        this.currentStrength = currentStrength;
-    }
-
-    public String getNimi() { return nimi;}
-
-    public void setNimi(String nimi) { this.nimi = nimi;}
-
-    public int getCurrentLevel() {
-        return currentLevel;
-    }
-
-    public void setCurrentLevel(int currentLevel) {
-        this.currentLevel = currentLevel;
-    }
-
-    public Vastane(String nimi, int currentHealth, double currentStrength, int currentLevel) {
-        this.currentHealth = currentHealth;
-        this.currentStrength = currentStrength;
-        this.nimi = nimi;
-        this.currentLevel = currentLevel;
-    }
-
+    @Override
     void healthUp(){
-        currentHealth = currentLevel+currentHealth+2;
+        currentHealth = M2ng.getLv()+currentHealth+2;
     }
+    @Override
     void strengthUp(){
-        currentStrength = currentLevel*0.15 + currentStrength;
+        currentStrength = M2ng.getLv()*0.15 + currentStrength;
     }
 }

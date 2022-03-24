@@ -1,10 +1,11 @@
 package OOPprojekt;
 
+import javax.swing.*;
+
 public class Karakter {
-    private String nimi;
-    private int currentHealth;
-    private double currentStrength;
-    int currentLevel;
+    int currentHealth;
+    double currentStrength;
+    String nimi;
 
     public int getCurrentHealth() {
         return currentHealth;
@@ -26,25 +27,16 @@ public class Karakter {
 
     public void setNimi(String nimi) { this.nimi = nimi;}
 
-    public int getCurrentLevel() {
-        return currentLevel;
-    }
-
-    public void setCurrentLevel(int currentLevel) {
-        this.currentLevel = currentLevel;
-    }
-
-    public Karakter(String nimi, int currentHealth, double currentStrength, int currentLevel) {
+    public Karakter(String nimi, int currentHealth, double currentStrength) {
         this.currentHealth = currentHealth;
         this.currentStrength = currentStrength;
         this.nimi = nimi;
-        this.currentLevel = currentLevel;
     }
 
     void healthUp(){
-        currentHealth = currentLevel+currentHealth;
+        currentHealth = M2ng.getLv() +currentHealth;
     }
     void strengthUp(){
-        currentStrength = currentLevel*0.2 + currentStrength;
+        currentStrength = M2ng.getLv()*0.2 + currentStrength;
     }
 }
