@@ -1,4 +1,4 @@
-package OOPprojekt;
+
 
 import javax.swing.JOptionPane;
 //Peaklass

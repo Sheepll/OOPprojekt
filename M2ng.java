@@ -1,4 +1,4 @@
-package OOPprojekt;
+
 
 import javax.swing.*;
 import java.util.Objects;
@@ -9,11 +9,11 @@ import java.util.Objects;
  */
 
 public class  M2ng {
-    Karakter m2ngija;
-    Vastane vastane;
-    static int lv = 1;
-    String[] nimed;
-    int nimeluger = 0;
+    private Karakter m2ngija;
+    private Vastane vastane;
+    private int lv = 1;
+    private String[] nimed;
+    private int nimeluger = 0;
 
     public M2ng(Karakter m2ngija, Vastane vastane,String[] nimed) {
         this.m2ngija = m2ngija;
@@ -22,9 +22,6 @@ public class  M2ng {
 
     }
 
-    public static int getLv() {
-        return lv;
-    }
 
 
     /**
@@ -87,16 +84,16 @@ public class  M2ng {
          }
          String valik = JOptionPane.showInputDialog(null, "Kui soovid tõsta tugevust, sisesta STR, kui elusid siis HP. Akna sulgemisel programm lõpetab töö.", "Valik", JOptionPane.QUESTION_MESSAGE);
          if (Objects.equals(valik, "STR")) {
-             m2ngija.strengthUp();
+             m2ngija.strengthUp(lv);
          } else if(Objects.equals(valik, "HP")) {
-             m2ngija.healthUp();
+             m2ngija.healthUp(lv);
          }
          else{
              System.out.println("Kasutaja lõpetas mängu.");
              break;
          }
-         vastane.healthUp();
-         vastane.strengthUp();
+         vastane.healthUp(lv);
+         vastane.strengthUp(lv);
          vastane.setNimi(nimed[nimeluger]);
      }
     }

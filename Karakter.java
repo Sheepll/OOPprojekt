@@ -1,4 +1,4 @@
-package OOPprojekt;
+
 
 
 /**
@@ -13,9 +13,9 @@ package OOPprojekt;
  */
 
 public class Karakter {
-    int currentHealth;
-    double currentStrength;
-    String nimi;
+    private int currentHealth;
+    private double currentStrength;
+    private String nimi;
 
     public int getCurrentHealth() {
         return currentHealth;
@@ -43,10 +43,10 @@ public class Karakter {
         this.nimi = nimi;
     }
 
-    void healthUp(){
-        currentHealth = M2ng.getLv() +currentHealth;
+    void healthUp(int lv){
+        currentHealth = lv +currentHealth;
     }
-    void strengthUp(){
-        currentStrength = M2ng.getLv()*0.2 + currentStrength;
+    void strengthUp(int lv){
+        currentStrength = lv*0.2 + currentStrength;
     }
 }

@@ -1,4 +1,4 @@
-package OOPprojekt;
+
 
 /**
  * Klass Vastane on vastast tähistav klass mis on klassi Karakter alamklass. Vastane katab üle klassi Karakter mõlemad
@@ -12,11 +12,11 @@ public class Vastane extends Karakter {
     }
 
     @Override
-    void healthUp(){
-        currentHealth = M2ng.getLv()+currentHealth+2;
+    void healthUp(int lv){
+        setCurrentHealth(lv+getCurrentHealth()+2);
     }
     @Override
-    void strengthUp(){
-        currentStrength = M2ng.getLv()*0.3 + currentStrength;
+    void strengthUp(int lv){
+        setCurrentStrength(lv*0.3 + getCurrentStrength());
     }
 }
