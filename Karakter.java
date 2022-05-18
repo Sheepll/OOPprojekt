@@ -17,6 +17,12 @@ public class Karakter {
     private double currentStrength;
     private String nimi;
 
+    public Karakter(String nimi, int currentHealth, double currentStrength) {
+        this.currentHealth = currentHealth;
+        this.currentStrength = currentStrength;
+        this.nimi = nimi;
+    }
+
     public int getCurrentHealth() {
         return currentHealth;
     }
@@ -37,11 +43,6 @@ public class Karakter {
 
     public void setNimi(String nimi) { this.nimi = nimi;}
 
-    public Karakter(String nimi, int currentHealth, double currentStrength) {
-        this.currentHealth = currentHealth;
-        this.currentStrength = currentStrength;
-        this.nimi = nimi;
-    }
 
     void healthUp(int lv){
         currentHealth = lv +currentHealth;

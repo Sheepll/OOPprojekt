@@ -18,7 +18,6 @@ public class Alg {
         Karakter m2ngija = new Karakter(karakteriNimi,30,1.0);
         Vastane loomake = new Vastane(nimed[0],10,0.8);
         M2ng test = new M2ng(m2ngija,loomake,nimed);
-        test.action();
     }
 }
 

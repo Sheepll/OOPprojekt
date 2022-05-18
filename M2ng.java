@@ -51,6 +51,8 @@ public class  M2ng {
          System.out.println(m2ngija.getNimi() + " kohtas metsas ohtlikku looma " + vastane.getNimi() + "!");
          Thread.sleep(1000);
          System.out.println(m2ngija.getNimi() + " VS " + vastane.getNimi());
+
+
          while (vastaseElud > 0 & m2ngijaElud > 0) {
              m2ngijaElud -= (int) Damage()*vastane.getCurrentStrength();
              System.out.println(m2ngija.getNimi() + " HP: " + m2ngijaElud);
