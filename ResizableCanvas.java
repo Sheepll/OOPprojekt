@@ -2,7 +2,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 
 /**
- * Lahendus voetud allikast: https://dlsc.com/2014/04/10/javafx-tip-1-resizable-canvas/
+ *
  */
 
 public class ResizableCanvas extends Canvas {
