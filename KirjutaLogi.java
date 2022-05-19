@@ -1,11 +1,13 @@
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class KirjutaLogi {
+    //static create() kindlustab, et iga mängu käivitamise puhul luuakse uus logifail
+    //või kirjutatakse vana üle. Seega on alati olemas kõige rohkem üks logifail,
+    //mis sisaldab infot kõige hiljutisema mängu kohta.
     static {create();}
-    private String tekst;
 
+    //Kirjutab antud failinimega faili teksti juurde, jättes eelneva sisu alles.
     public void sissekanne(String tekst){
         try{
             FileWriter fail = new FileWriter("logifail.txt",true);
